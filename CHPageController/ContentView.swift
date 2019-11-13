@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+   
     var body: some View {
-       
-        CHPageController(items.map { DemoListView(item:$0)},items:  items)
+         
+        CHPageController(items.map{DemoListView(item: $0)},items: items ,menuViewconfig: CHMenuViewConfig( selectedColor: Color.red, normalFont: 15, selectedFont: 17))
     }
 }
 

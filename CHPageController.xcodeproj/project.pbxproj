@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F8CB12D237A3F9F009273D1 /* CHPageMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8CB12C237A3F9F009273D1 /* CHPageMenuViewModel.swift */; };
+		8F8D0F41237BA23400876D49 /* CHMenuViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D0F40237BA23400876D49 /* CHMenuViewConfig.swift */; };
 		8F8E6EDA23790E38000B6854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E6ED923790E38000B6854 /* AppDelegate.swift */; };
 		8F8E6EDC23790E38000B6854 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E6EDB23790E38000B6854 /* SceneDelegate.swift */; };
 		8F8E6EDE23790E38000B6854 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E6EDD23790E38000B6854 /* ContentView.swift */; };
@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F8CB12C237A3F9F009273D1 /* CHPageMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHPageMenuViewModel.swift; sourceTree = "<group>"; };
+		8F8D0F40237BA23400876D49 /* CHMenuViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHMenuViewConfig.swift; sourceTree = "<group>"; };
 		8F8E6ED623790E38000B6854 /* CHPageController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHPageController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8E6ED923790E38000B6854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F8E6EDB23790E38000B6854 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 				8F8E6F1123791013000B6854 /* CHPageController.swift */,
 				8F8E6F0B23790EBE000B6854 /* CHPageViewController.swift */,
 				8F8E6F0D23790F54000B6854 /* CHPageMenuView.swift */,
-				8F8CB12C237A3F9F009273D1 /* CHPageMenuViewModel.swift */,
+				8F8D0F40237BA23400876D49 /* CHMenuViewConfig.swift */,
 			);
 			path = PageController;
 			sourceTree = "<group>";
@@ -303,12 +303,12 @@
 			files = (
 				8F8E6F0C23790EBE000B6854 /* CHPageViewController.swift in Sources */,
 				8F8E6EDA23790E38000B6854 /* AppDelegate.swift in Sources */,
-				8F8CB12D237A3F9F009273D1 /* CHPageMenuViewModel.swift in Sources */,
 				8F8E6F15237935AB000B6854 /* DemoListView.swift in Sources */,
 				8F8E6EDC23790E38000B6854 /* SceneDelegate.swift in Sources */,
 				8F8E6F1223791013000B6854 /* CHPageController.swift in Sources */,
 				8F8E6EDE23790E38000B6854 /* ContentView.swift in Sources */,
 				8F8E6F0E23790F54000B6854 /* CHPageMenuView.swift in Sources */,
+				8F8D0F41237BA23400876D49 /* CHMenuViewConfig.swift in Sources */,
 				8F8E6F19237942B0000B6854 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
