@@ -24,7 +24,7 @@ struct CHPageController<Page: View>: View {
     var body: some View {
         VStack {
  
-            CHPageMenuView(titles: titles, config: menuViewConfig ?? CHMenuViewConfig(), currentPage: $currentPage)
+            CHMenuView(titles: titles, config: menuViewConfig ?? CHMenuViewConfig(), currentPage: $currentPage)
             CHPageViewController(controllers: viewControllers, currentPage: $currentPage)
             
         }

@@ -10,10 +10,11 @@ import SwiftUI
  
 struct   CHMenuViewConfig   {
         var normalColor : Color = Color.secondary
-        var selectedColor : Color?
-        var normalFont : Double = 15.0
-        var selectedFont : Double = 15.0
-        var space       : Double = 15.0
+        var selectedColor : Color = Color.red
+        var normalFont : CGFloat = 15.0
+        var selectedFont : CGFloat = 15.0
+        var space       : CGFloat = 15.0
+        var barHeight   : CGFloat      = 50
 }
 
   

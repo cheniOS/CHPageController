@@ -21,6 +21,7 @@
 		8F8E6F1223791013000B6854 /* CHPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E6F1123791013000B6854 /* CHPageController.swift */; };
 		8F8E6F15237935AB000B6854 /* DemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E6F14237935AB000B6854 /* DemoListView.swift */; };
 		8F8E6F19237942B0000B6854 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8E6F18237942B0000B6854 /* Data.swift */; };
+		8F9846D8237CEFA2005C854F /* CHMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9846D7237CEFA2005C854F /* CHMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		8F8E6F1123791013000B6854 /* CHPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHPageController.swift; sourceTree = "<group>"; };
 		8F8E6F14237935AB000B6854 /* DemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListView.swift; sourceTree = "<group>"; };
 		8F8E6F18237942B0000B6854 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8F9846D7237CEFA2005C854F /* CHMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				8F8E6F1123791013000B6854 /* CHPageController.swift */,
 				8F8E6F0B23790EBE000B6854 /* CHPageViewController.swift */,
 				8F8E6F0D23790F54000B6854 /* CHPageMenuView.swift */,
+				8F9846D7237CEFA2005C854F /* CHMenuView.swift */,
 				8F8D0F40237BA23400876D49 /* CHMenuViewConfig.swift */,
 			);
 			path = PageController;
@@ -304,6 +307,7 @@
 				8F8E6F0C23790EBE000B6854 /* CHPageViewController.swift in Sources */,
 				8F8E6EDA23790E38000B6854 /* AppDelegate.swift in Sources */,
 				8F8E6F15237935AB000B6854 /* DemoListView.swift in Sources */,
+				8F9846D8237CEFA2005C854F /* CHMenuView.swift in Sources */,
 				8F8E6EDC23790E38000B6854 /* SceneDelegate.swift in Sources */,
 				8F8E6F1223791013000B6854 /* CHPageController.swift in Sources */,
 				8F8E6EDE23790E38000B6854 /* ContentView.swift in Sources */,

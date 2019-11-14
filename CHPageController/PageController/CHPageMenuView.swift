@@ -18,13 +18,14 @@ struct CHPageMenuView: View {
     private var stackWidth: CGFloat { self.getCurrentWidth(index: self.titles.count - 1 ) }
      var body: some View {
         GeometryReader() { geometry in
+            ScrollView(.horizontal,showsIndicators: false){
             HStack(alignment: .center, spacing: 0) {
                 ForEach(self.titles.indices) { i in
                     ZStack{
- 
+
                         Button(action: {
                               self.currentPage = i
-                              self.select()
+//                              self.select()
                         })
                         {Text(self.getItem(index: i).name) .foregroundColor(self.isSelected(currentPage: self.currentPage, currentItem: self.getItem(index: i) ,data: self.titles) ? self.config.selectedColor : self.config.normalColor)}.frame(width: self.getItemWidth(index: i), height: 50).font(.system(size: self.isSelected(currentPage: self.currentPage, currentItem: self.getItem(index: i) ,data: self.titles) ?CGFloat(self.config.selectedFont) :CGFloat(self.config.normalFont)))
                     }.onAppear(){
@@ -32,20 +33,23 @@ struct CHPageMenuView: View {
                     }
                 }
             }
-            .offset(x: self.offset)
-            .gesture(
+            .offset(x: withAnimation{self.select()} )
+ 
+           .position(x:   self.stackWidth/2 , y: geometry.size.height/2)
+            }.gesture(
                 DragGesture().updating(self.$translation) { value, state, transaction in
                     state = value.translation.width
+                    let chor = self.select() +  value.translation.width
+//                    self.anchor += value.translation.width
+
+                                       let index = self.slipWithIndex(to: chor)
+
+                                       self.tapSelect(index: index)
                 }
                 .onEnded { value in
-                    self.anchor += value.translation.width
-
-                    let index = self.slipWithIndex(to: self.anchor)
-
-                    self.tapSelect(index: index)
+ 
                 }
             )
-           .position(x:   self.stackWidth/2 , y: geometry.size.height/2)
         }.frame(height: 50)
     }
     func getItem(index : Int) -> PageItem {
@@ -53,7 +57,7 @@ struct CHPageMenuView: View {
         return item
     }
      
-    func select( )  {
+    func select( )->CGFloat  {
         var offset = CGFloat(self.currentPage) * self.getItemWidth(index: self.currentPage)
           
            if offset < ( UIScreen.main.bounds.width/2) {
@@ -66,11 +70,11 @@ struct CHPageMenuView: View {
               offset = self.stackWidth - UIScreen.main.bounds.width
     
            }
-
-           withAnimation(.easeInOut(duration: 0.2)) {
-               anchor = -offset
-           }
-        
+//            anchor = -offset
+//           withAnimation(.easeInOut(duration: 0.2)) {
+//               anchor = -offset
+//           }
+        return -offset
        }
     private func slipWithIndex(to offset: CGFloat) -> Int {
         if  (offset < 0){
@@ -102,7 +106,7 @@ struct CHPageMenuView: View {
     func getItemWidth(index : Int) -> CGFloat {
         let item = self.titles[index]
         let font = self.config.normalFont > self.config.selectedFont ? self.config.normalFont : self.config.selectedFont
-        let width = (Double( item.name.count ) *   font) + self.config.space
+        let width = (CGFloat( item.name.count ) *   font) + self.config.space
         return CGFloat(width)
     }
     func getCurrentWidth(index : Int)->CGFloat {
